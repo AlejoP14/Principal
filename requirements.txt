@@ -1,0 +1,15 @@
+asgiref        ==        3.5.2
+cffi             ==      1.15.1
+cryptography      ==     37.0.4
+Django             ==    4.0.5
+django-ckeditor    ==    6.4.2
+django-js-asset    ==    2.0.0
+mysql-connector-python == 8.0.30
+Pillow        ==         9.1.1
+pip             ==       22.1.2
+pycparser       ==       2.21
+PyMySQL         ==       1.0.2
+setuptools      ==       58.1.0
+sqlparse        ==       0.4.2
+tzdata          ==       2022.1
+wheel           ==       0.37.1

@@ -1,0 +1,46 @@
+{% extends 'inicio/encabezado.html' %} {% block titulo %} Comentarios {% endblock %} {% block imagen %} {%load static%} {%static 'inicio/imagenes/comment.png'%} {% endblock %} {% block text %} Coment <span>TIC</span> {% endblock %} {% block encabezado
+%} {% block encabezado %}
+
+
+<!--Encabezdo -->
+<div class="page-header">
+    <div class="page-title">
+        <h3>Comentario
+            <small>Registra tus comentarios</small></h3>
+    </div>
+
+</div>
+<!-- /Encabezado-->
+
+{% endblock %}
+<!-- /Encabezado-->
+
+{% block contenido %}
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Usuario</th>
+            <th>Mensaje</th>
+            <th></th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {% for coments in comentarios %}
+        <tr style="text-align: center;">
+
+            <td class="text-semibold">{{coments.usuario}}</td>
+            <td class="muted">{{coments.mensaje}}</td>
+            <td class="muted"><a href="{%url 'ConsultarIndividual' coments.id %}">Editar</a>
+            </td>
+
+            <td class="text-center"><a href="{%url 'Eliminar' coments.id%}">Eliminar</a></td </tr>
+            {% endfor %}
+    </tbody>
+
+</table>
+
+
+{% endblock %}
